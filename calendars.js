@@ -15,4 +15,15 @@ window.onload = function () {
 	cal_11  = new Epoch('epoch_popup','popup',document.getElementById('popup_container11'),solo_date,'solo');
 	cal_12  = new Epoch('epoch_popup','popup',document.getElementById('popup_container12'),solo_date,'solo');
 
+	var table = document.getElementById("firstdates");
+	var rowNode = document.createElement("tr");
+	var tanCell = document.createElement("td");
+	var soloCell = document.createElement("td");
+	var tanNode = document.createTextNode(tandem_date);
+	var soloNode = document.createTextNode(solo_date);
+	tanCell.appendChild(tanNode);
+	rowNode.appendChild(tanNode);	
+	soloCell.appendChild(soloNode);
+	rowNode.appendChild(soloNode);
+	table.appendChild(rowNode);	
 };
