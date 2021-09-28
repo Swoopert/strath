@@ -1,6 +1,6 @@
 var cal_1,cal_2,cal_3,cal_4,cal_5,cal_6,cal_7,cal_8,cal_9,cal_10,cal_11,cal_12; 
 var tandem_date = '2021-10-20 00:00:00';
-var solo_date = '2021-12-04';
+var solo_date = '2021-12-04 00:00:00';
 window.onload = function () {
 	cal_1  = new Epoch('epoch_popup','popup',document.getElementById('popup_container1'),tandem_date,'tandem');
 	cal_2  = new Epoch('epoch_popup','popup',document.getElementById('popup_container2'),tandem_date,'tandem');
