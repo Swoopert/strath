@@ -23,8 +23,8 @@ window.onload = function () {
 	cal_12  = new Epoch('epoch_popup','popup',document.getElementById('popup_container12'),solo_date,'solo');
 
 	tanCell.appendChild(tanNode);
-	rowNode.appendChild(tanNode);	
+	rowNode.appendChild(tanCell);	
 	soloCell.appendChild(soloNode);
-	rowNode.appendChild(soloNode);
+	rowNode.appendChild(soloCell);
 	table.appendChild(rowNode);	
 };
