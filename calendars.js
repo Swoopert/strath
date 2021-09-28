@@ -19,10 +19,10 @@ window.onload = function () {
 
 	var table = document.getElementById('firstdates');
 	var rowNode = document.createElement('tr');
-	var tanCell = document.createElement('td');
-	var soloCell = document.createElement('td');
-	var tanNode = document.createTextNode(tandem_date);
-	var soloNode = document.createTextNode(solo_date);
+	var tanCell = document.createElement('th');
+	var soloCell = document.createElement('th');
+	var tanNode = document.createTextNode(tandem_date.toLocaleDateString('en-GB'));
+	var soloNode = document.createTextNode(solo_date.toLocaleDateString('en-GB'));
 		
 	tanCell.appendChild(tanNode);
 	rowNode.appendChild(tanCell);	
