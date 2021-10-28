@@ -763,7 +763,10 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 		 	  (this.date.getMonth() == 11 && 
 				(this.date.getDate() == 32)
 			  ) ||
-			  (this.date.getMonth() < 2
+			  (this.date.getMonth() == 0 &&
+			   	(this.date.getDate() > 8)
+			  ) ||
+			  (this.date.getMonth() == 1
 			  ) ||
 			  (this.date.getMonth() == 2 && 
 				(this.date.getDate() < 26)
