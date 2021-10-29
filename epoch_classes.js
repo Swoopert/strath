@@ -748,7 +748,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	       ) {
 		this.cellClass = 'offday';
 	}
-    else if(this.owner.displayMonth == this.date.getMonth() && 
+    	else if(this.owner.displayMonth == this.date.getMonth() && 
 	    this.owner.system == 'tandem' && 
 	    this.owner.firstDate <= this.date && 
 	    (
@@ -798,7 +798,12 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 		 	  (this.date.getMonth() == 11 && 
 				(this.date.getDate() == 32)
 			  ) ||
-			  this.date >= new Date(2022,0,9)
+			  (this.date.getMonth() < 3
+			  ) ||
+			  (this.date.getMonth() == 3 && 
+				(this.date.getDate() == 3)
+			  ) ||
+			  this.date >= new Date(2022,3,17)
 			)
 	    	) || 
 	    	(this.date.getDay() == 3 &&
