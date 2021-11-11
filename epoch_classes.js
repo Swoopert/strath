@@ -758,7 +758,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 		 		(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 10 && 
-		 		(this.date.getDate() == 27)
+		 		(this.date.getDate() == 32)
 			  ) ||
 		 	  (this.date.getMonth() == 11 && 
 				(this.date.getDate() == 32)
@@ -796,7 +796,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 				(this.date.getDate() == 32)
 			  ) ||
 		 	  (this.date.getMonth() == 11 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() == 5)
 			  ) ||
 			  (this.date.getMonth() < 3
 			  ) ||
@@ -809,12 +809,12 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	    	(this.date.getDay() == 3 &&
 	        	(
 			  (this.date.getMonth() == 10 && 
-		 		(this.date.getDate() == 32)
+		 		(this.date.getDate() == 24)
 			  ) ||
 		 	  (this.date.getMonth() == 11 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() == 1)
 			  ) ||
-			  this.date >= new Date(2021,10,24)
+			  this.date >= new Date(2022,0,12)
 			)
 		)
 	    )
