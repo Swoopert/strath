@@ -743,7 +743,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 		this.cellClass = 'cell_selected';
 	}
 	else if(this.date < this.owner.firstDate || 
-            (this.date.getMonth() == 11 && this.date.getDate() > 19) ||  
+            (this.date.getMonth() == 11 && this.date.getDate() > 12) ||  
             (this.date.getMonth() == 00 && this.date.getDate() < 08)
 	       ) {
 		this.cellClass = 'offday';
