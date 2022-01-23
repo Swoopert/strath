@@ -764,18 +764,19 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 0 &&
-			   	(this.date.getDate() == 29)
+			   	(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 1 &&
 			   	(this.date.getDate() > 5)
 			  ) ||
 			  (this.date.getMonth() == 2 && 
-				(this.date.getDate() == 12 || this.date.getDate() == 19)
+				(this.date.getDate() == 5 || this.date.getDate() == 12)
 			  ) ||
 			  (this.date.getMonth() == 3 && 
-				(this.date.getDate() == 2 || this.date.getDate() > 9)
+				(this.date.getDate() == 2 || this.date.getDate() > 16)
 			  ) ||
-			  (this.date.getMonth() == 4
+			  (this.date.getMonth() == 4 &&
+			   	(this.date.getDate() > 7)
 			  ) ||
 			  (this.date.getMonth() == 5 && 
 				(this.date.getDate() < 25)
@@ -783,10 +784,11 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 			  (this.date.getMonth() == 6 && 
 				(this.date.getDate() > 9)
 			  ) ||
-			  (this.date.getMonth() == 7
+			  (this.date.getMonth() == 7 &&
+			   	(this.date.getDate() < 27)
 			  ) ||
 			  (this.date.getMonth() == 8 &&
-			   	(this.date.getDate() < 17)
+			   	(this.date.getDate() == 3)
 			  ) ||
 			  this.date >= new Date(2022,8,24)
 			)
@@ -800,13 +802,13 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 0 &&
-			   	(this.date.getDate() == 30)
+			   	(this.date.getDate() == 32)
 			  ) ||
 		 	  (this.date.getMonth() == 1 && 
-				(this.date.getDate() != 32)
+				(this.date.getDate() > 6)
 			  ) ||
 		 	  (this.date.getMonth() == 2 && 
-				(this.date.getDate() != 6)
+				(this.date.getDate() > 6)
 			  ) ||
 			  (this.date.getMonth() == 3 && 
 				(this.date.getDate() == 3)
@@ -820,12 +822,12 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 		 		(this.date.getDate() == 32)
 			  ) ||
 		 	  (this.date.getMonth() == 11 && 
-				((this.date.getDate() == 1) || (this.date.getDate() == 8))
+				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 0 && 
 		 		(this.date.getDate() == 32)
 			  ) ||
-			  this.date >= new Date(2022,1,1)
+			  this.date >= new Date(2023,1,1)
 			)
 		)
 	    )
