@@ -820,7 +820,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 			   	(this.date.getDate() == 12)
 			  ) ||
 			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() != 10 || this.date.getDate() != 17)
+				(this.date.getDate() < 10 || this.date.getDate() > 17)
 			  ) ||
 			  this.date >= new Date(2022,6,24)
 			)
