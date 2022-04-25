@@ -25,7 +25,7 @@ function Epoch(name,mode,targetelement,firstdate,system,multiselect)
 	this.selectMultiple = (multiselect == true); //'false' is not true or not set at all
 	
 	//the various calendar variables
-	this.firstDate = new Date(firstdate)-1;
+	this.firstDate = new Date(firstdate+" 00:00:00");
     this.system = system;
 	this.selectedDates = new Array();
 	this.calendar;
