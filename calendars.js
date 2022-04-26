@@ -1,6 +1,6 @@
 var cal_1,cal_2,cal_3,cal_4,cal_5,cal_6,cal_7,cal_8,cal_9,cal_10,cal_11,cal_12; 
-var tandem_date = '2022-07-16';
-var solo_date = '2022-05-28';
+var tandem_date = '2022-07-22';
+var solo_date = '2022-06-10';
 
 
 window.onload = function () {
@@ -21,8 +21,8 @@ window.onload = function () {
 	var rowNode = document.createElement('tr');
 	var tanCell = document.createElement('th');
 	var soloCell = document.createElement('th');
-	var tanNode = document.createTextNode(new Date(tandem_date).toLocaleDateString('en-GB'));
-	var soloNode = document.createTextNode(new Date(solo_date).toLocaleDateString('en-GB'));
+	var tanNode = document.createTextNode((new Date(tandem_date).toLocaleDateString('en-GB')+1));
+	var soloNode = document.createTextNode((new Date(solo_date).toLocaleDateString('en-GB')+1));
 		
 	tanCell.appendChild(tanNode);
 	rowNode.appendChild(tanCell);	
