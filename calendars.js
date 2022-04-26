@@ -22,7 +22,7 @@ window.onload = function () {
 	var tanCell = document.createElement('th');
 	var soloCell = document.createElement('th');
 	var tanDate = new Date(tandem_date).toLocaleDateString('en-GB');
-	var soloDate = new Date(solo_date).toLocaleDateString('en-GB')
+	var soloDate = new Date(solo_date).toLocaleDateString('en-GB');
 	var tanNode = document.createTextNode(tanDate.setDate(tanDate.getDate()+1));
 	var soloNode = document.createTextNode(soloDate.setDate(soloDate.getDate()+1));
 		
