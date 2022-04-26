@@ -21,8 +21,8 @@ window.onload = function () {
 	var rowNode = document.createElement('tr');
 	var tanCell = document.createElement('th');
 	var soloCell = document.createElement('th');
-	var tanNode = document.createTextNode((new Date(tandem_date).toLocaleDateString('en-GB')+1));
-	var soloNode = document.createTextNode((new Date(solo_date).toLocaleDateString('en-GB')+1));
+	var tanNode = document.createTextNode(new Date(tandem_date).toLocaleDateString('en-GB'));
+	var soloNode = document.createTextNode(new Date(solo_date).toLocaleDateString('en-GB'));
 		
 	tanCell.appendChild(tanNode);
 	rowNode.appendChild(tanCell);	
