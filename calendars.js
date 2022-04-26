@@ -21,10 +21,12 @@ window.onload = function () {
 	var rowNode = document.createElement('tr');
 	var tanCell = document.createElement('th');
 	var soloCell = document.createElement('th');
-	var tanDate = new Date(tandem_date).toLocaleDateString('en-GB');
-	var soloDate = new Date(solo_date).toLocaleDateString('en-GB');
-	var tanNode = document.createTextNode(tanDate.setDate(tanDate.getDate()+1));
-	var soloNode = document.createTextNode(soloDate.setDate(soloDate.getDate()+1));
+	var tanDate = new Date(tandem_date);
+	tanDate.setDate(tanDate.getDate()+1);
+	var tanNode = document.createTextNode(tanDate.toLocaleDateString('en-GB'));	
+	var soloDate = new Date(solo_date);
+	soloDate.setDate(soloDate.getDate()+1);
+	var soloNode = document.createTextNode(soloDate.toLocaleDateString('en-GB'));
 		
 	tanCell.appendChild(tanNode);
 	rowNode.appendChild(tanCell);	
