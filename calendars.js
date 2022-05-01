@@ -36,7 +36,7 @@ window.onload = function () {
 	soloCell.appendChild(soloNode);
 	rowNode.appendChild(soloCell);
 	table.appendChild(rowNode);
-	
+	futureCell.colSpan = 2;
 	futureCell.appendChild(futureNode);
 	row2Node.appendChild(futureCell);
 	table.appendChild(row2Node);
