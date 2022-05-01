@@ -27,10 +27,17 @@ window.onload = function () {
 	var soloDate = new Date(solo_date);
 	soloDate.setDate(soloDate.getDate()+1);
 	var soloNode = document.createTextNode(soloDate.toLocaleDateString('en-GB'));
+	var row2Node = document.createElement('tr');
+	var futureCell = document.createElement('td');
+	var futureNode = document.createTextNode('Click the Date boxes below to see other available dates');
 		
 	tanCell.appendChild(tanNode);
 	rowNode.appendChild(tanCell);	
 	soloCell.appendChild(soloNode);
 	rowNode.appendChild(soloCell);
-	table.appendChild(rowNode);	
+	table.appendChild(rowNode);
+	
+	futureCell.appendChild(futureNode);
+	row2Node.appendChild(futureCell);
+	table.appendChild(row2Node);
 };
