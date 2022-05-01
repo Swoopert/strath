@@ -37,7 +37,7 @@ window.onload = function () {
 	rowNode.appendChild(soloCell);
 	table.appendChild(rowNode);
 	futureCell.colSpan = 2;
-	futureCell.textAlign = 'center';
+	futureCell.style.textAlign = 'center';
 	futureCell.appendChild(futureNode);
 	row2Node.appendChild(futureCell);
 	table.appendChild(row2Node);
