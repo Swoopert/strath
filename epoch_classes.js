@@ -748,6 +748,13 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	       ) {
 		this.cellClass = 'offday';
 	}
+	else if(this.owner.system == 'tandem' &&
+		this.date.getMonth() == 7 && 
+		this.date.getDate() >= 1 && 
+		this.date.getDate() <= 5
+		) {
+		this.cellClass= 'jmpday';
+	}
     	else if(this.owner.displayMonth == this.date.getMonth() && 
 	    this.owner.system == 'tandem' && 
 	    this.owner.firstDate <= this.date && 
@@ -779,18 +786,18 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 			   	(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 5 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() > 10)
 			  ) ||
 			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() <> 32)
 			  ) ||
 			  (this.date.getMonth() == 7 &&
-			   	(this.date.getDate() == 6)
+			   	(this.date.getDate() <> 32)
 			  ) ||
 			  (this.date.getMonth() == 8 &&
-			   	(this.date.getDate() == 3)
+			   	(this.date.getDate() == 32)
 			  ) ||
-			  this.date >= new Date(2022,8,24)
+			  this.date >= new Date(2022,9,1)
 			)
 	    	) || 
 	    	(this.date.getDay() == 0 && 
@@ -817,15 +824,18 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 5 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() > 10)
 			  ) ||
 			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() <> 32)
 			  ) ||
 			  (this.date.getMonth() == 7 && 
-				(this.date.getDate() == 7 || this.date.getDate() == 14 || this.date.getDate() == 28)
+				(this.date.getDate() <> 32)
 			  ) ||
-			  this.date >= new Date(2022,8,11)
+			  (this.date.getMonth() == 8 && 
+				(this.date.getDate() == 25)
+			  ) ||
+			  this.date >= new Date(2022,9,1)
 			)
 	    	) || 
 	    	(this.date.getDay() == 3 &&
