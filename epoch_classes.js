@@ -750,8 +750,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	}
 	else if(this.owner.system == 'tandem' &&
 		this.date.getMonth() == 7 && 
-		 (this.date.getDate() == 1 ||
-		  this.date.getDate() == 3 ||
+		 (this.date.getDate() == 3 ||
 		  this.date.getDate() == 4
 		 )
 		) {
