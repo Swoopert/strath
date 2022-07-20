@@ -750,8 +750,8 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	}
 	else if(this.owner.system == 'tandem' &&
 		this.date.getMonth() == 7 && 
-		 (this.date.getDate() == 3 ||
-		  this.date.getDate() == 4
+		 (this.date.getDate() == 32 ||
+		  this.date.getDate() == 33
 		 )
 		) {
 		this.cellClass= 'jmpday';
@@ -763,7 +763,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	    	(this.date.getDay() == 6 &&
 	        	(
 			  (this.date.getMonth() == 9 && 
-		 		(this.date.getDate() == 32)
+		 		(this.date.getDate() == 15 || this.date.getDate() == 22)
 			  ) ||
 			  (this.date.getMonth() == 10 && 
 		 		(this.date.getDate() == 32)
@@ -790,15 +790,15 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() == 23)
+				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 7 &&
 			   	(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 8 &&
-			   	(this.date.getDate() == 24)
+			   	(this.date.getDate() == 32)
 			  ) ||
-			  this.date >= new Date(2022,8,24)
+			  this.date >= new Date(2022,9,30)
 			)
 	    	) || 
 	    	(this.date.getDay() == 0 && 
@@ -834,6 +834,9 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 8 && 
+				(this.date.getDate() == 11)
+			  ) ||
+			  (this.date.getMonth() == 9 && 
 				(this.date.getDate() == 32)
 			  ) ||
 			  this.date >= new Date(2022,9,9)
