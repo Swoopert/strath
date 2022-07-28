@@ -743,8 +743,8 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 		this.cellClass = 'cell_selected';
 	}
 	else if(this.date < this.owner.firstDate || 
-            (this.date.getMonth() == 11 && this.date.getDate() > 12) ||  
-            (this.date.getMonth() == 00 && this.date.getDate() < 08)
+            (this.date.getMonth() == 11 && this.date.getDate() > 18) ||  
+            (this.date.getMonth() == 00 && this.date.getDate() < 07)
 	       ) {
 		this.cellClass = 'offday';
 	}
@@ -763,7 +763,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	    	(this.date.getDay() == 6 &&
 	        	(
 			  (this.date.getMonth() == 9 && 
-		 		(this.date.getDate() == 15 || this.date.getDate() == 22)
+		 		(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 10 && 
 		 		(this.date.getDate() == 32)
@@ -798,7 +798,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 			  (this.date.getMonth() == 8 &&
 			   	(this.date.getDate() == 32)
 			  ) ||
-			  this.date >= new Date(2022,9,30)
+			  this.date >= new Date(2022,9,22)
 			)
 	    	) || 
 	    	(this.date.getDay() == 0 && 
@@ -834,12 +834,12 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 8 && 
-				(this.date.getDate() == 11)
+				(this.date.getDate() == 32)
 			  ) ||
 			  (this.date.getMonth() == 9 && 
 				(this.date.getDate() == 32)
 			  ) ||
-			  this.date >= new Date(2022,9,9)
+			  this.date >= new Date(2022,10,23)
 			)
 	    	) || 
 	    	(this.date.getDay() == 3 &&
