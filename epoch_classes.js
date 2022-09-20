@@ -763,83 +763,83 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	    	(this.date.getDay() == 6 &&
 	        	(
 			  (this.date.getMonth() == 9 && 
-		 		(this.date.getDate() == 32)
+		 		(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 10 && 
-		 		(this.date.getDate() == 32)
+		 		(this.date.getDate() != 32)
 			  ) ||
 		 	  (this.date.getMonth() == 11 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 0 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 1 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 2 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 3 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 22)
 			  ) ||
 			  (this.date.getMonth() == 4 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() != 20)
 			  ) ||
 			  (this.date.getMonth() == 5 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() < 17)
 			  ) ||
 			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 7 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() == 12 || this.date.getDate() == 26)
 			  ) ||
 			  (this.date.getMonth() == 8 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() == 9 || this.date.getDate() == 30)
 			  ) ||
-			  this.date >= new Date(2022,9,22)
+			  this.date >= new Date(2023,9,1)
 			)
 	    	) || 
 	    	(this.date.getDay() == 0 && 
 	     		(
 			  (this.date.getMonth() == 10 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 		 	  (this.date.getMonth() == 11 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 0 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() != 32)
 			  ) ||
 		 	  (this.date.getMonth() == 1 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 		 	  (this.date.getMonth() == 2 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 3 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 23)
 			  ) ||
 			  (this.date.getMonth() == 4 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 21)
 			  ) ||
 			  (this.date.getMonth() == 5 &&
-			   	(this.date.getDate() == 32)
+			   	(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 32)
 			  ) ||
 			  (this.date.getMonth() == 7 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 6)
 			  ) ||
 			  (this.date.getMonth() == 8 && 
-				(this.date.getDate() == 32)
+				(this.date.getDate() != 24)
 			  ) ||
 			  (this.date.getMonth() == 9 && 
 				(this.date.getDate() == 32)
 			  ) ||
-			  this.date >= new Date(2022,9,23)
+			  this.date >= new Date(2023,9,1)
 			)
 	    	) || 
 	    	(this.date.getDay() == 3 &&
