@@ -1,6 +1,6 @@
 var cal_1,cal_2,cal_3,cal_4,cal_5,cal_6,cal_7,cal_8,cal_9,cal_10,cal_11,cal_12; 
-var tandem_date = '2023-01-20';
-var solo_date = '2023-01-20';
+var tandem_date = '2023-01-21';
+var solo_date = '2023-01-13';
 
 
 window.onload = function () {
