@@ -30,7 +30,14 @@ window.onload = function () {
 	var row2Node = document.createElement('tr');
 	var futureCell = document.createElement('td');
 	var futureNode = document.createTextNode('Click on the date boxes below to see further available dates');
-		
+	var availabilityNode = document.createElement('iframe');
+      
+	availabilityNode.src= "https://calendar.google.com/calendar/embed?height=600&wkst=7&bgcolor=%23039BE5&ctz=Europe%2FLondon&mode=AGENDA&showTabs=0&showCalendars=0&showTz=0&showPrint=0&showDate=0&showNav=0&src=OWE2OGFjNGRhM2MzMzc0OTUxMDFjYWQ0Njk3MjJkOTY5ZjM4OTk1MmJmYzQ5ODM2MmVlMDU4YTRhNTA4YTUxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33";
+        availabilityNode.width = "400";
+        availabilityNode.height = "600";
+	availabilityNode.scrolling = "no"
+	availabilityNode.frameborder = "0"
+
 	tanCell.appendChild(tanNode);
 	rowNode.appendChild(tanCell);	
 	soloCell.appendChild(soloNode);
@@ -38,7 +45,7 @@ window.onload = function () {
 	table.appendChild(rowNode);
 	futureCell.colSpan = 2;
 	futureCell.style.textAlign = 'center';
-	futureCell.appendChild(futureNode);
+	futureCell.appendChild(availabilityNode);
 	row2Node.appendChild(futureCell);
 	table.appendChild(row2Node);
 };
