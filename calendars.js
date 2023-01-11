@@ -29,7 +29,7 @@ window.onload = function () {
 	var soloNode = document.createTextNode(soloDate.toLocaleDateString('en-GB'));
 	var row2Node = document.createElement('tr');
 	var futureCell = document.createElement('td');
-	var futureNode = document.createTextNode('Click the Date boxes below to see other available dates');
+	var futureNode = document.createTextNode('<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=7&bgcolor=%23039BE5&ctz=Europe%2FLondon&mode=AGENDA&showTabs=0&showCalendars=0&showTz=0&showPrint=0&showDate=0&showNav=0&src=OWE2OGFjNGRhM2MzMzc0OTUxMDFjYWQ0Njk3MjJkOTY5ZjM4OTk1MmJmYzQ5ODM2MmVlMDU4YTRhNTA4YTUxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33" style="border:solid 1px #777" width="400" height="600" frameborder="0" scrolling="no"></iframe>');
 		
 	tanCell.appendChild(tanNode);
 	rowNode.appendChild(tanCell);	
