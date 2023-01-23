@@ -14,6 +14,7 @@
       let soloAvailability = [];
       let tandemAvailability = [];
       let gapiInited = false;
+      let datesPopulated = false;
 
 
       /**
@@ -35,6 +36,7 @@
         gapiInited = true;
         soloAvailability = await getSoloEvents();
         tandemAvailability = await getTandemEvents();
+	datesPopulated = true;
       }
 
       async function getSoloEvents() {
