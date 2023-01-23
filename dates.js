@@ -3,7 +3,7 @@ var tandem_date = '2023-02-11';
 var solo_date = '2023-02-17';
 
 
-window.onload function () {
+window.onload = function () {
 	
 	await datesPopulated = true;
 	
