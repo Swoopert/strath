@@ -121,6 +121,7 @@ function Epoch(name,mode,targetelement,availability,system,multiselect)
 	//the various calendar variables
 	this.systemAvailability = availability;
 	this.firstDate = new Date(this.systemAvailability[0]);
+	window.alert(this.system+":\nFirst Date: "+this.firstDate.toString()+"\nLength of Array: "+this.systemAvailability.length);
         this.system = system;
 	this.selectedDates = new Array();
 	this.calendar;
@@ -834,7 +835,6 @@ CalCell.prototype.onclick = function ()
 //-----------------------------------------------------------------------------
 CalCell.prototype.setClass = function ()  //private: sets the CSS class of the cell based on the specified criteria
 {
-	window.alert("Date position in Avail array: "+this.owner.systemAvailability.indexOf(this.date));
 	if(this.selected) {
 		this.cellClass = 'cell_selected';
 	}
