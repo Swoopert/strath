@@ -20,7 +20,7 @@ window.onload = async function () {
 	var soloNode = document.createTextNode(soloDate.toLocaleDateString('en-GB'));
 	var row2Node = document.createElement('tr');
 	var futureCell = document.createElement('td');
-	var futureNode = document.createTextNode('Click on the date boxes below to see further available dates');
+	var futureNode = document.createTextNode(soloAvailability.toString()+'\n\n\n'+tandemAvailability.toString());
 	var availabilityNode = document.createElement('iframe');
       
 	availabilityNode.src= "https://calendar.google.com/calendar/embed?height=600&wkst=7&bgcolor=%23039BE5&ctz=Europe%2FLondon&mode=AGENDA&showTabs=0&showCalendars=0&showTz=0&showPrint=0&showDate=0&showNav=0&src=OWE2OGFjNGRhM2MzMzc0OTUxMDFjYWQ0Njk3MjJkOTY5ZjM4OTk1MmJmYzQ5ODM2MmVlMDU4YTRhNTA4YTUxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33";
@@ -36,7 +36,7 @@ window.onload = async function () {
 	table.appendChild(rowNode);
 	futureCell.colSpan = 2;
 	futureCell.style.textAlign = 'center';
-	futureCell.appendChild(availabilityNode);
+	futureCell.appendChild(futureNode);
 	row2Node.appendChild(futureCell);
 	table.appendChild(row2Node);
 };
