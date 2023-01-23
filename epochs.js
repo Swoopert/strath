@@ -834,16 +834,13 @@ CalCell.prototype.onclick = function ()
 //-----------------------------------------------------------------------------
 CalCell.prototype.setClass = function ()  //private: sets the CSS class of the cell based on the specified criteria
 {
-	
-	window.alert("Length of "+this.owner.system+" availability: "+this.owner.systemAvailability.length+"\nChecking for "+this.date.toISOString().substring(0,10));
-	
 	if(this.selected) {
 		this.cellClass = 'cell_selected';
 	}
 	else if(this.date < this.owner.firstDate) {
 		this.cellClass = 'offday';
 	}
-        else if(this.owner.displayMonth > this.date.getMonth() ) {
+        else if(this.owner.displayMonth != this.date.getMonth() ) {
 		this.cellClass = 'notmnth';	
 	}
 	else if(this.owner.systemAvailability.indexOf(this.date.toISOString().substring(0,10)) > -1) {
