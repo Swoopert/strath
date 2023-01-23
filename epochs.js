@@ -168,8 +168,7 @@ Epoch.prototype.setDays = function ()  //PRIVATE: initializes the standard Grego
 	this.monthDayCount = new Array(31,((this.curDate.getFullYear() - 2000) % 4 ? 28 : 29),31,30,31,30,31,31,30,31,30,31);
 };
 //-----------------------------------------------------------------------------
-Epoch.prototype.
-	= function (element,className) //PRIVATE: sets the CSS class of the element, W3C & IE
+Epoch.prototype.setClass = function (element,className) //PRIVATE: sets the CSS class of the element, W3C & IE
 {
 	element.setAttribute('class',className);
 	element.setAttribute('className',className); //<iehack>
