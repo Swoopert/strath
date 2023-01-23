@@ -121,8 +121,8 @@ function Epoch(name,mode,targetelement,availability,system,multiselect)
 	//the various calendar variables
 	this.systemAvailability = availability;
 	this.firstDate = new Date(this.systemAvailability[0]);
-	window.alert(this.system+":\nFirst Date: "+this.firstDate.toString()+"\nLength of Array: "+this.systemAvailability.length);
-        this.system = system;
+	this.system = system;
+	window.alert(this.system+":\nFirst Date: "+this.firstDate+"\nLength of Array: "+this.systemAvailability.length);
 	this.selectedDates = new Array();
 	this.calendar;
 	this.calHeading;
@@ -844,7 +844,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
         else if(this.owner.displayMonth > this.date.getMonth() ) {
 		this.cellClass = 'notmnth';	
 	}
-	else if(this.owner.systemAvailability.indexOf(this.date) > -1) {
+	else if(this.owner.systemAvailability.indexOf(this.date.toString()) > -1) {
 		this.cellClass = 'jmpday';
 	}
 	else {
