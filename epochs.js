@@ -69,6 +69,7 @@
           }
 	}
         if (soloAvailability.length == 0) { alert('Empty Solo Availability!'); };
+	return soloAvailability;
        }
 
       async function getTandemEvents() {
@@ -99,6 +100,7 @@
           }
 	}
        if (tandemAvailability.length == 0) { alert('Empty Tandem Availability!'); };
+       return tandemAvailability;
        }
 
 
