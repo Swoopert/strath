@@ -37,6 +37,7 @@
         soloAvailability = await getSoloEvents();
         tandemAvailability = await getTandemEvents();
 	datesPopulated = true;
+	await loadDates();
       }
 
       async function getSoloEvents() {
