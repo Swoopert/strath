@@ -20,7 +20,7 @@ window.onload = async function () {
 	var soloNode = document.createTextNode(soloDate.toLocaleDateString('en-GB'));
 	var row2Node = document.createElement('tr');
 	var futureCell = document.createElement('td');
-	var futureNode = document.createTextNode(soloAvailability.toString()+'\n\n\n'+tandemAvailability.toString());
+	var futureNode = document.createTextNode(soloAvailability.length+'\n\n\n'+tandemAvailability.length);
 	var availabilityNode = document.createElement('iframe');
       
 	availabilityNode.src= "https://calendar.google.com/calendar/embed?height=600&wkst=7&bgcolor=%23039BE5&ctz=Europe%2FLondon&mode=AGENDA&showTabs=0&showCalendars=0&showTz=0&showPrint=0&showDate=0&showNav=0&src=OWE2OGFjNGRhM2MzMzc0OTUxMDFjYWQ0Njk3MjJkOTY5ZjM4OTk1MmJmYzQ5ODM2MmVlMDU4YTRhNTA4YTUxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33";
