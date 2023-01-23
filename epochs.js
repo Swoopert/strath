@@ -126,7 +126,7 @@ function Epoch(name,mode,targetelement,availability,system,multiselect)
 	
 	//the various calendar variables
 	this.systemAvailability = availability;
-	this.firstDate = new Date(availability[0].toString());
+	this.firstDate = new Date(systemAvailability[0].toString());
         this.system = system;
 	this.selectedDates = new Array();
 	this.calendar;
