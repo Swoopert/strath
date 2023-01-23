@@ -116,7 +116,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 *****************************************************************************/
 //constructor for the main Epoch class (ENGLISH VERSION)
-function Epoch(name,mode,targetelement,firstdate,system,multiselect)
+function Epoch(name,mode,targetelement,availability,system,multiselect)
 {
 	this.state = 0;
 	this.name = name;
@@ -125,8 +125,8 @@ function Epoch(name,mode,targetelement,firstdate,system,multiselect)
 	this.selectMultiple = (multiselect == true); //'false' is not true or not set at all
 	
 	//the various calendar variables
-	this.firstDate = new Date(firstdate[0]);
-	this.systemAvailability = firstdate;
+	this.systemAvailability = availability;
+	this.firstDate = new Date(availability[0].toString());
         this.system = system;
 	this.selectedDates = new Array();
 	this.calendar;
