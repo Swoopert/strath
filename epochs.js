@@ -37,7 +37,6 @@
         soloAvailability = await getSoloEvents();
         tandemAvailability = await getTandemEvents();
 	datesPopulated = true;
-        window.alert("Tandem availability: "+tandemAvailability.length+"\n Solo availability: "+soloAvailability.length);
 	await loadDates(soloAvailability,tandemAvailability);
       }
 
@@ -52,14 +51,11 @@
           };
           response = await gapi.client.calendar.events.list(request);
         } catch (err) {
-          alert(err.message);
-          return;
+          return err.message;
         }
 
         const events = response.result.items;
         
-	window.alert("Tandem events length: "+events.length);
-	      
         let summaryArr;
 
         for (i=0;i<events.length;i++) {
@@ -68,8 +64,7 @@
             soloAvailability.push(events[i].start.date);
           }
 	}
-        if (soloAvailability.length == 0) { alert('Empty Solo Availability!'); };
-	return soloAvailability;
+        return soloAvailability;
        }
 
       async function getTandemEvents() {
@@ -83,14 +78,11 @@
           };
           response = await gapi.client.calendar.events.list(request);
         } catch (err) {
-          alert(err.message);
-          return;
+          return err.message;
         }
 
         const events = response.result.items;
 	      
-	window.alert("Solo events length: "+events.length);
-        
         let summaryArr;
 
         for (i=0;i<events.length;i++) {
@@ -99,8 +91,7 @@
             tandemAvailability.push(events[i].start.date);
           }
 	}
-       if (tandemAvailability.length == 0) { alert('Empty Tandem Availability!'); };
-       return tandemAvailability;
+	return tandemAvailability;
        }
 
 
@@ -843,6 +834,7 @@ CalCell.prototype.onclick = function ()
 //-----------------------------------------------------------------------------
 CalCell.prototype.setClass = function ()  //private: sets the CSS class of the cell based on the specified criteria
 {
+	window.alert("Date position in Avail array: "+this.owner.systemAvailability.indexOf(this.date));
 	if(this.selected) {
 		this.cellClass = 'cell_selected';
 	}
