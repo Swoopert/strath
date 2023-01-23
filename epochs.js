@@ -37,6 +37,7 @@
         soloAvailability = await getSoloEvents();
         tandemAvailability = await getTandemEvents();
 	datesPopulated = true;
+        window.alert("Tandem availability: "+tandemAvailability.length+"\n Solo availability: "+soloAvailability.length);
 	await loadDates(soloAvailability,tandemAvailability);
       }
 
