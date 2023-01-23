@@ -168,7 +168,8 @@ Epoch.prototype.setDays = function ()  //PRIVATE: initializes the standard Grego
 	this.monthDayCount = new Array(31,((this.curDate.getFullYear() - 2000) % 4 ? 28 : 29),31,30,31,30,31,31,30,31,30,31);
 };
 //-----------------------------------------------------------------------------
-Epoch.prototype.setClass = function (element,className) //PRIVATE: sets the CSS class of the element, W3C & IE
+Epoch.prototype.
+	= function (element,className) //PRIVATE: sets the CSS class of the element, W3C & IE
 {
 	element.setAttribute('class',className);
 	element.setAttribute('className',className); //<iehack>
@@ -739,128 +740,10 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	if(this.selected) {
 		this.cellClass = 'cell_selected';
 	}
-	else if(this.date < this.owner.firstDate || 
-            (this.date.getMonth() == 11 && this.date.getDate() > 18) ||  
-            (this.date.getMonth() == 00 && this.date.getDate() < 07)
-	       ) {
+	else if(this.date < this.owner.firstDate) {
 		this.cellClass = 'offday';
 	}
-	else if(this.owner.system == 'tandem' &&
-		this.date.getMonth() == 7 && 
-		 (this.date.getDate() == 32 ||
-		  this.date.getDate() == 33
-		 )
-		) {
-		this.cellClass= 'jmpday';
-	}
-    	else if(this.owner.displayMonth == this.date.getMonth() && 
-	    this.owner.system == 'tandem' && 
-	    this.owner.firstDate <= this.date && 
-	    (
-	    	(this.date.getDay() == 6 &&
-	        	(
-			  (this.date.getMonth() == 9 && 
-		 		(this.date.getDate() != 32)
-			  ) ||
-			  (this.date.getMonth() == 10 && 
-		 		(this.date.getDate() != 32)
-			  ) ||
-		 	  (this.date.getMonth() == 11 && 
-				(this.date.getDate() != 32)
-			  ) ||
-			  (this.date.getMonth() == 0 &&
-			   	(this.date.getDate() == 28)
-			  ) ||
-			  (this.date.getMonth() == 1 &&
-			   	(this.date.getDate() == 18)
-			  ) ||
-			  (this.date.getMonth() == 2 && 
-				(this.date.getDate() >= 11)
-			  ) ||
-			  (this.date.getMonth() == 3 && 
-				(this.date.getDate() != 22)
-			  ) ||
-			  (this.date.getMonth() == 4 &&
-			   	(this.date.getDate() == 6)
-			  ) ||
-			  (this.date.getMonth() == 5 && 
-				(this.date.getDate() == 32)
-			  ) ||
-			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() != 15)
-			  ) ||
-			  (this.date.getMonth() == 7 &&
-			   	(this.date.getDate() == 12 || this.date.getDate() == 26)
-			  ) ||
-			  (this.date.getMonth() == 8 &&
-			   	(this.date.getDate() == 9 || this.date.getDate() == 30)
-			  ) ||
-			  this.date >= new Date(2023,9,1)
-			)
-	    	) || 
-	    	(this.date.getDay() == 0 && 
-	     		(
-			  (this.date.getMonth() == 10 && 
-				(this.date.getDate() != 32)
-			  ) ||
-		 	  (this.date.getMonth() == 11 && 
-				(this.date.getDate() != 32)
-			  ) ||
-			  (this.date.getMonth() == 0 &&
-			   	(this.date.getDate() == 32)
-			  ) ||
-		 	  (this.date.getMonth() == 1 && 
-				(this.date.getDate() >= 12)
-			  ) ||
-		 	  (this.date.getMonth() == 2 && 
-				(this.date.getDate() != 32)
-			  ) ||
-			  (this.date.getMonth() == 3 && 
-				(this.date.getDate() != 23)
-			  ) ||
-			  (this.date.getMonth() == 4 && 
-				(this.date.getDate() != 21)
-			  ) ||
-			  (this.date.getMonth() == 5 &&
-			   	(this.date.getDate() != 32)
-			  ) ||
-			  (this.date.getMonth() == 6 && 
-				(this.date.getDate() != 32)
-			  ) ||
-			  (this.date.getMonth() == 7 && 
-				(this.date.getDate() != 6)
-			  ) ||
-			  (this.date.getMonth() == 8 && 
-				(this.date.getDate() != 24)
-			  ) ||
-			  (this.date.getMonth() == 9 && 
-				(this.date.getDate() != 32)
-			  ) ||
-			  this.date >= new Date(2023,9,1)
-			)
-	    	) || 
-	    	(this.date.getDay() == 3 &&
-	        	(
-			  (this.date.getMonth() == 10 && 
-		 		(this.date.getDate() == 32)
-			  ) ||
-		 	  (this.date.getMonth() == 11 && 
-				(this.date.getDate() == 32)
-			  ) ||
-			  (this.date.getMonth() == 0 && 
-		 		(this.date.getDate() == 32)
-			  ) ||
-			  this.date >= new Date(2024,1,1)
-			)
-		)
-	    )
-	   ) {
-		this.cellClass = 'jmpday';
-	}
-    else if(this.owner.displayMonth == this.date.getMonth()  && this.owner.system == 'solo' && this.owner.firstDate <= this.date && this.date.getDay() == 6) {
-		this.cellClass = 'jmpday';
-	}
-    else if(this.owner.displayMonth > this.date.getMonth() ) {
+        else if(this.owner.displayMonth > this.date.getMonth() ) {
 		this.cellClass = 'notmnth';	
 	}
 	else {
