@@ -834,6 +834,9 @@ CalCell.prototype.onclick = function ()
 //-----------------------------------------------------------------------------
 CalCell.prototype.setClass = function ()  //private: sets the CSS class of the cell based on the specified criteria
 {
+	
+	window.alert("Length of system Availability: "+this.owner.systemAvailability.length+"\nChecking for "+this.date.getFullYear()+'-'+this.date.getMonth()+'-'+this.date.getDate());
+	
 	if(this.selected) {
 		this.cellClass = 'cell_selected';
 	}
@@ -843,7 +846,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
         else if(this.owner.displayMonth > this.date.getMonth() ) {
 		this.cellClass = 'notmnth';	
 	}
-	else if(this.owner.systemAvailability.indexOf(this.date.getYear()+'-'+this.date.getMonth()+'-'+this.date.getDate()) > -1) {
+	else if(this.owner.systemAvailability.indexOf(this.date.getFullYear()+'-'+this.date.getMonth()+'-'+this.date.getDate()) > -1) {
 		this.cellClass = 'jmpday';
 	}
 	else {
