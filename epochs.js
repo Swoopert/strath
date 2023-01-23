@@ -56,7 +56,7 @@
 
         const events = response.result.items;
         
-	if (events.length == 0) { alert('Empty Solo Events!'); };
+	window.alert("Tandem events length: "+events.length);
 	      
         let summaryArr;
 
@@ -86,7 +86,7 @@
 
         const events = response.result.items;
 	      
-	if (events.length == 0) { alert('Empty Tandem Events!'); };
+	window.alert("Solo events length: "+events.length);
         
         let summaryArr;
 
