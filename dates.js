@@ -4,6 +4,8 @@ async function loadDates() {
 	
 	await datesPopulated == true;
 	
+	alert("soloAvailability: "+soloAvailability.length+"\n tandemAvailability: "+tandemAvailability.length);
+	
 	cal_1  = new Epoch('epoch_popup','popup',document.getElementById('popup_container1'),tandemAvailability,'tandem');
 	cal_2  = new Epoch('epoch_popup','popup',document.getElementById('popup_container2'),soloAvailability,'solo');
 
