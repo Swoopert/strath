@@ -1,6 +1,6 @@
 var cal_1,cal_2;
 
-window.onload = async function () {
+async function loadDates() {
 	
 	await datesPopulated == true;
 	
