@@ -1,24 +1,21 @@
 var cal_1,cal_2;
-var tandem_date = '2023-02-11';
-var solo_date = '2023-02-17';
-
 
 window.onload = async function () {
 	
 	await datesPopulated == true;
 	
-	cal_1  = new Epoch('epoch_popup','popup',document.getElementById('popup_container1'),tandem_date,'tandem');
-	cal_2  = new Epoch('epoch_popup','popup',document.getElementById('popup_container2'),solo_date,'solo');
+	cal_1  = new Epoch('epoch_popup','popup',document.getElementById('popup_container1'),tandemAvailability,'tandem');
+	cal_2  = new Epoch('epoch_popup','popup',document.getElementById('popup_container2'),soloAvailability,'solo');
 
 
 	var table = document.getElementById('firstdates');
 	var rowNode = document.createElement('tr');
 	var tanCell = document.createElement('th');
 	var soloCell = document.createElement('th');
-	var tanDate = new Date(tandem_date);
+	var tanDate = new Date(tandemAvailability[0]);
 	tanDate.setDate(tanDate.getDate()+1);
 	var tanNode = document.createTextNode(tanDate.toLocaleDateString('en-GB'));	
-	var soloDate = new Date(solo_date);
+	var soloDate = new Date(soloAvailability[0]);
 	soloDate.setDate(soloDate.getDate()+1);
 	var soloNode = document.createTextNode(soloDate.toLocaleDateString('en-GB'));
 	var row2Node = document.createElement('tr');
