@@ -7,7 +7,7 @@ async function loadDates(soloavail,tandemavail) {
 	alert("soloAvailability: "+soloavail.length+"\n tandemAvailability: "+tandemavail.length);
 	
 	cal_1  = new Epoch('epoch_popup','popup',document.getElementById('popup_container1'),tandemavail,'tandem');
-	cal_2  = new Epoch('epoch_popup','popup',document.getElementById('popup_container2'),tandemavail,'solo');
+	cal_2  = new Epoch('epoch_popup','popup',document.getElementById('popup_container2'),soloavail,'solo');
 
 
 	var table = document.getElementById('firstdates');
