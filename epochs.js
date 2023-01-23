@@ -56,7 +56,7 @@
 
         const events = response.result.items;
         
-	if events.length == 0 { alert('Empty Solo Events!'); };
+	if (events.length == 0) { alert('Empty Solo Events!'); };
 	      
         let summaryArr;
 
@@ -66,7 +66,7 @@
             soloAvailability.push(events[i].start.date);
           }
 	}
-        if soloAvailability.length == 0 { alert('Empty Solo Availability!'); };
+        if (soloAvailability.length == 0) { alert('Empty Solo Availability!'); };
        }
 
       async function getTandemEvents() {
@@ -86,7 +86,7 @@
 
         const events = response.result.items;
 	      
-	if events.length == 0 { alert('Empty Tandem Events!'); };
+	if (events.length == 0) { alert('Empty Tandem Events!'); };
         
         let summaryArr;
 
@@ -96,7 +96,7 @@
             tandemAvailability.push(events[i].start.date);
           }
 	}
-       if tandemAvailability.length == 0 { alert('Empty Tandem Availability!'); };
+       if (tandemAvailability.length == 0) { alert('Empty Tandem Availability!'); };
        }
 
 
