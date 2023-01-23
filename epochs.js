@@ -50,12 +50,14 @@
           };
           response = await gapi.client.calendar.events.list(request);
         } catch (err) {
-          document.getElementById('content').innerText = err.message;
+          alert(err.message);
           return;
         }
 
         const events = response.result.items;
         
+	if events.length == 0 { alert('Empty Solo Events!'); };
+	      
         let summaryArr;
 
         for (i=0;i<events.length;i++) {
@@ -63,7 +65,8 @@
           if (summaryArr[4] != "0") {
             soloAvailability.push(events[i].start.date);
           }
-        }
+	}
+        if soloAvailability.length == 0 { alert('Empty Solo Availability!'); };
        }
 
       async function getTandemEvents() {
@@ -77,11 +80,13 @@
           };
           response = await gapi.client.calendar.events.list(request);
         } catch (err) {
-          document.getElementById('content').innerText = err.message;
+          alert(err.message);
           return;
         }
 
         const events = response.result.items;
+	      
+	if events.length == 0 { alert('Empty Tandem Events!'); };
         
         let summaryArr;
 
@@ -90,7 +95,8 @@
           if (summaryArr[4] != "0") {
             tandemAvailability.push(events[i].start.date);
           }
-        }
+	}
+       if tandemAvailability.length == 0 { alert('Empty Tandem Availability!'); };
        }
 
 
