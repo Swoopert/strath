@@ -1,3 +1,96 @@
+      /* exported gapiLoaded */
+
+      // TODO(developer): Set to client ID and API key from the Developer Console
+      const CLIENT_ID = '876064215712-ddtaql16676las9kav9ic25otlg22844.apps.googleusercontent.com';
+      const API_KEY = 'AIzaSyAawJODlUPO69vIgDVc9OyvAkcs1owekrA';
+
+      // Discovery doc URL for APIs used by the quickstart
+      const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
+
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
+
+      let soloAvailability = [];
+      let tandemAvailability = [];
+      let gapiInited = false;
+
+
+      /**
+       * Callback after api.js is loaded.
+       */
+      function gapiLoaded() {
+        gapi.load('client', initializeGapiClient);
+      }
+
+      /**
+       * Callback after the API client is loaded. Loads the
+       * discovery doc to initialize the API.
+       */
+      async function initializeGapiClient() {
+        await gapi.client.init({
+          apiKey: API_KEY,
+          discoveryDocs: [DISCOVERY_DOC],
+        });
+        gapiInited = true;
+        soloAvailability = await getSoloEvents();
+        tandemAvailability = await getTandemEvents();
+      }
+
+      async function getSoloEvents() {
+        let response;
+        try {
+          const request = {
+            'calendarId': '9a68ac4da3c337495101cad469722d969f389952bfc498362ee058a4a508a518@group.calendar.google.com',
+            'singleEvents': true,
+            'orderBy': 'startTime',
+            'q': 'Solo Course Spaces Available: '
+          };
+          response = await gapi.client.calendar.events.list(request);
+        } catch (err) {
+          document.getElementById('content').innerText = err.message;
+          return;
+        }
+
+        const events = response.result.items;
+        
+        let summaryArr;
+
+        for (i=0;i<events.length;i++) {
+          summaryArr = events[i].summary.split(" ");
+          if (summaryArr[4] != "0") {
+            soloAvailability.push(events[i].start.date);
+          }
+        }
+       }
+
+      async function getTandemEvents() {
+        let response;
+        try {
+          const request = {
+            'calendarId': '9a68ac4da3c337495101cad469722d969f389952bfc498362ee058a4a508a518@group.calendar.google.com',
+            'singleEvents': true,
+            'orderBy': 'startTime',
+            'q': 'Tandem Skydive Spaces Available: '
+          };
+          response = await gapi.client.calendar.events.list(request);
+        } catch (err) {
+          document.getElementById('content').innerText = err.message;
+          return;
+        }
+
+        const events = response.result.items;
+        
+        let summaryArr;
+
+        for (i=0;i<events.length;i++) {
+          summaryArr = events[i].summary.split(" ");
+          if (summaryArr[4] != "0") {
+            tandemAvailability.push(events[i].start.date);
+          }
+        }
+       }
+
 /*****************************************************************************
 Copyright (C) 2006  Nick Baicoianu
 This program is free software; you can redistribute it and/or
@@ -745,6 +838,12 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
 	}
         else if(this.owner.displayMonth > this.date.getMonth() ) {
 		this.cellClass = 'notmnth';	
+	}
+	else if(this.owner.system = 'Solo' && this.owner.soloAvailability.indexOf(this.date) > -1) {
+		this.cellClass = 'jmpday';
+	}
+	else if(this.owner.system = 'Tandem' && this.owner.tandemAvailability.indexOf(this.date) > -1) {
+		this.cellClass = 'jmpday';
 	}
 	else {
 		this.cellClass = 'offday';
