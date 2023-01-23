@@ -5,7 +5,7 @@ var solo_date = '2023-02-17';
 
 window.onload = async function () {
 	
-	await datesPopulated = true;
+	await datesPopulated == true;
 	
 	cal_1  = new Epoch('epoch_popup','popup',document.getElementById('popup_container1'),tandem_date,'tandem');
 	cal_2  = new Epoch('epoch_popup','popup',document.getElementById('popup_container2'),solo_date,'solo');
