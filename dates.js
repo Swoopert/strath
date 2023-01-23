@@ -1,6 +1,6 @@
 var cal_1,cal_2;
 var tandem_date = '2023-02-11';
-var solo_date = '2023-02-18';
+var solo_date = '2023-02-17';
 
 
 window.onload = function () {
