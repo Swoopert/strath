@@ -834,6 +834,8 @@ CalCell.prototype.onclick = function ()
 //-----------------------------------------------------------------------------
 CalCell.prototype.setClass = function ()  //private: sets the CSS class of the cell based on the specified criteria
 {
+	const searchDate = new Date(this.date.getTime() - (this.date.getTimezoneOffset() * 60000 )).toISOString().substring(0,10);
+	
 	if(this.selected) {
 		this.cellClass = 'cell_selected';
 	}
@@ -843,7 +845,7 @@ CalCell.prototype.setClass = function ()  //private: sets the CSS class of the c
         else if(this.owner.displayMonth != this.date.getMonth() ) {
 		this.cellClass = 'notmnth';	
 	}
-	else if(this.owner.systemAvailability.indexOf(this.date.toISOString().substring(0,10)) > -1) {
+	else if(this.owner.systemAvailability.indexOf(searchDate) > -1) {
 		this.cellClass = 'jmpday';
 	}
 	else {
