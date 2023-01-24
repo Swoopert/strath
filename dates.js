@@ -11,9 +11,9 @@ async function loadDates(soloavail,tandemavail) {
 	var rowNode = document.createElement('tr');
 	var tanCell = document.createElement('th');
 	var soloCell = document.createElement('th');
-	var tanDate = new Date(tandemavail[0].getTime() - (tandemavail[0].getTimezoneOffset() * 60000 ));
+	var tanDate = new Date(tandemavail[0]);
 	var tanNode = document.createTextNode(tanDate.toLocaleDateString('en-GB'));	
-	var soloDate = new Date(soloavail[0].getTime() - (soloavail[0].getTimezoneOffset() * 60000 ));
+	var soloDate = new Date(soloavail[0]);
 	var soloNode = document.createTextNode(soloDate.toLocaleDateString('en-GB'));
 	var row2Node = document.createElement('tr');
 	var futureCell = document.createElement('td');
